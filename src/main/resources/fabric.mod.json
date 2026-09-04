@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "treasurespotter",
+  "version": "${version}",
+  "name": "Treasure Spotter",
+  "description": "Highlights the chunk-local (9, 9) surface block in every loaded chunk - the fixed column buried treasure structures anchor to. Toggle on/off with a configurable keybind.",
+  "authors": [
+    "zaz"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "dev.zaz.treasurespotter.TreasureSpotterClient"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "minecraft": [
+      ">=1.21.11",
+      "<1.22"
+    ],
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
