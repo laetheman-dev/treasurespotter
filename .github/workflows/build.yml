@@ -29,12 +29,12 @@ jobs:
           distribution: 'temurin'
 
       # This repo does not ship a Gradle wrapper jar, so a real Gradle
-      # distribution is provisioned here instead. gradle.properties pins the
-      # Loom version this mod builds against; keep this in step with it.
+      # distribution is provisioned here instead. Fabric Loom 1.18.0-alpha.20
+      # requires Gradle's plugin API version 9.7.0+, hence 9.7.1 here.
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v4
         with:
-          gradle-version: '9.4.1'
+          gradle-version: '9.7.1'
 
       - name: Build
         run: gradle build --stacktrace
