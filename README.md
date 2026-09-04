@@ -62,7 +62,7 @@ git push origin v1.0.0
 
 ### Option B — Build locally
 
-You'll need a local Gradle install (this project targets **Gradle 9.4.1**,
+You'll need a local Gradle install (this project targets **Gradle 9.7.1**,
 matching the Loom version pinned in `gradle.properties`) and a network that
 can reach `maven.fabricmc.net`, `libraries.minecraft.net`, and
 `piston-meta.mojang.com` (Loom downloads Minecraft and the official mappings
@@ -78,7 +78,7 @@ If you'd rather have a `./gradlew` wrapper for convenience, generate one
 locally with your own Gradle install (this only needs to be done once):
 
 ```bash
-gradle wrapper --gradle-version 9.4.1
+gradle wrapper --gradle-version 9.7.1
 ```
 
 ## Installing
