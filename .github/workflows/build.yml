@@ -18,10 +18,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Set up JDK 21
+      # Fabric Loom 1.18.0-alpha.20's Gradle plugin itself requires a JVM
+      # runtime of at least Java 25 to run (this is unrelated to the mod's
+      # own bytecode target, which is pinned to Java 21 in build.gradle via
+      # `options.release = 21`, matching what Minecraft 1.21.11 requires).
+      - name: Set up JDK 25
         uses: actions/setup-java@v4
         with:
-          java-version: '21'
+          java-version: '25'
           distribution: 'temurin'
 
       # This repo does not ship a Gradle wrapper jar, so a real Gradle
